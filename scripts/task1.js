@@ -1,13 +1,17 @@
-function findAverage(arr) {
-  const sum = arr.reduce((acc, curr) => acc + curr, 0);
-    return sum / arr.length;
+const arr = ['milk', 'beer', 'beer', 'milk', 'milk'];
+const resultDiv = document.getElementById('results');
+
+function displayResults() {
+  let resultString = '';
+  for (let product = 0; product < arr.length; product++) {
+    switch(arr[product]) {
+      case 'milk':
+        resultString += 'Хорошо<br>';
+        break;
+      case 'beer':
+        resultString += 'Плохо<br>';
+        break;
+    }
+  }
+  resultDiv.innerHTML = resultString;
 }
-
-const calculateBtn = document.querySelector('#calculate-btn');
-const resultDiv = document.querySelector('#result');
-
-calculateBtn.addEventListener('click', () => {
-  const arr = [1, 5, 12, 4, 3]; // Change this to any array you want to calculate the average for
-  const average = findAverage(arr);
-  resultDiv.textContent = `The average is ${average}`;
-});

@@ -31,3 +31,16 @@ function calculateAverage(arr) {
     resultDiv2.innerHTML = resultDiv2.innerHTML + " " + average + "<br>";
 }
 
+function task3Question() {
+    const userAnswer = prompt("У квадратного стола отпилили один угол. Сколько теперь углов у него стало?");
+
+    switch (userAnswer.toLowerCase()) {
+        case "5":
+        case "пять":
+            alert("Ответ верный");
+            break;
+        default:
+            alert("Ответ неверный");
+            break;
+    }
+}

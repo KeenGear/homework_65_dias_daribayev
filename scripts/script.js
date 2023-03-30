@@ -44,3 +44,25 @@ function task3Question() {
             break;
     }
 }
+
+
+const duck = {
+    name: "Дональд",
+    color: "Белый",
+    age: 1,
+    toStr: function () {
+        return `${this.name}, ${this.color}, ${this.age} год`;
+    },
+    say: function () {
+        return "кря кря";
+    }
+};
+
+function displayDuck() {
+    const toStrResultDiv = document.getElementById("toStrResult");
+    const sayResultDiv = document.getElementById("sayResult");
+    const toStrResultString = duck.toStr();
+    const sayResultString = duck.say();
+    toStrResultDiv.innerHTML = toStrResultString;
+    sayResultDiv.innerHTML = sayResultString;
+}
